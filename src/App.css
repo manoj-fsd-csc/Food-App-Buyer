@@ -344,7 +344,7 @@ color:orangered;
   .searchInputBox  {
     border: 1px solid gray;
     margin-top: 150px;
-    height: 55px;
+    height: 60px;
     width: 858px;
     font-size: 17px;
     display: flex;
