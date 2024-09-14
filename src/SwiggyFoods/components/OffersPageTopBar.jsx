@@ -9,6 +9,15 @@ import { BiSolidOffer } from "react-icons/bi";
   
  
  const HelpTopBar=()=> {
+  const LogoutHandler = () =>{
+    confirm("Are you sure to logout?")
+      localStorage.removeItem("clientId");
+      localStorage.removeItem("clientName");
+      localStorage.removeItem('clientAddress');
+      localStorage.removeItem('clientEmail');
+      localStorage.removeItem('clientPhoneNo');
+      
+   }
    return (
    <section className='topBarSection'>
         <div className="companyTitle">
@@ -69,13 +78,15 @@ import { BiSolidOffer } from "react-icons/bi";
               <div className='logins'><span>MANOJ</span></div>
             </div>
           </Link>
-          <div className="logindropdown-content">
+          <div className="logindropdown-content"> 
             <Link  className='link' to="/MyAccount">Profile</Link>
             <Link  className='link' to="/CheckOut">Orders</Link>
             <Link  className='link' to="/landing">Favourites</Link>
             <Link  className='link' to="/" >
-                     Logout
-             </Link>
+                <div onClick={LogoutHandler}>
+                    Logout
+                </div>
+            </Link>
           </div>
         </div>
              

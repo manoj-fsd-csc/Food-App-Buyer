@@ -15,7 +15,15 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
  
    const { existingProductC } = useContext(ProductContext);
  
- 
+   const LogoutHandler = () =>{
+    confirm("Are you sure to logout?")
+      localStorage.removeItem("clientId");
+      localStorage.removeItem("clientName");
+      localStorage.removeItem('clientAddress');
+      localStorage.removeItem('clientEmail');
+      localStorage.removeItem('clientPhoneNo');
+      
+   }
   
   const handleSearchClick = () => {
     inputRefHandle();  
@@ -83,11 +91,15 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
               <div className='logins'><span>MANOJ</span></div>
             </div>
           </Link>
-          <div className="logindropdown-content">
-            <a href="/MyAccount">Profile</a>
-            <a href="/CheckOut">Orders</a>
-            <a href="/landing">Favourites</a>
-            <a href="/RigesterAndLogin">Logout</a>
+          <div className="logindropdown-content"> 
+            <Link  className='link' to="/MyAccount">Profile</Link>
+            <Link  className='link' to="/CheckOut">Orders</Link>
+            <Link  className='link' to="/landing">Favourites</Link>
+            <Link  className='link' to="/" >
+                <div onClick={LogoutHandler}>
+                    Logout
+                </div>
+            </Link>
           </div>
         </div>
       </div>
