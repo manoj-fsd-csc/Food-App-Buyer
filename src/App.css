@@ -1,26 +1,4 @@
  
-
-/* .containerRL button{
-.containerRL .signInBtn .signUpBtn{
-.containerRL button.hiddenRL{
-.containerRL .signInBtn .signUpBtn.hiddenRL{
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
@@ -2180,4 +2158,58 @@ input.invalid {
 }
 
 
- 
+   /* *****************MyAccountPage***************** */
+
+
+   .accountPage{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .accountBox{
+    /* border: 1px solid red; */
+    height:auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+  
+  .accountImage{
+    /* border: 1px solid rgb(13, 194, 185); */
+    height: 360px;
+    width: 400px;
+  }
+  .accountImage img{
+    /* border: 1px solid rgb(231, 135, 8); */
+    height: 360px;
+    width: 400px;
+  }
+  .accountString{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 5px;
+   }
+
+  .accountBUTTON{
+    height: 38px;
+    width: 280px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    font-weight: 600;
+    margin-top: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;    
+  }
+  .accountBUTTON:hover{
+  box-shadow: none;
+  }
