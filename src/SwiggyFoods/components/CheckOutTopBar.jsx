@@ -18,7 +18,7 @@ function CheckOutTopBar() {
   
        window.location.href = "/";  
     } else {
-      window.location.href = "/landing"; 
+     console.log("Check")
     }
   };
   return (
