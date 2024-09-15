@@ -2226,3 +2226,53 @@ input.invalid {
   .accountBUTTON:hover{
   box-shadow: none;
   }
+
+
+   /* ***********temporary-alert*********** */ 
+ 
+ 
+ .temporary-alert {
+  position: fixed;
+  top: 100px;
+    right: 20px;
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 10px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  /* animation: fadeout 3s forwards; */
+}
+
+.underline {
+  height: 2px;
+  background-color:white;
+  width: 100%;
+  margin-top: 5px;
+  animation: shrink 4s forwards;
+}
+
+/* Shrink the underline width over time */
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Fade out the entire alert after the duration */
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

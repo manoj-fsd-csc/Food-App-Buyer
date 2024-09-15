@@ -7,11 +7,13 @@ import { BsBagPlus } from "react-icons/bs";
 import { BsPerson } from "react-icons/bs";
 import swiggyLogo from '../../assets/images/swiggy3.svg';
 import { ProductContext } from '../../context/ProductContext';
+import TemporaryAlert from '.././components/TemporaryAlert ';
 
 
 
 const TopBar = ( ) => {
 const { totalCost } = useContext(ProductContext);
+const [showAlert, setShowAlert] = useState(false); // State for controlling the alert visibility
 
 
 /* const handleSearchClick = () => {
@@ -29,7 +31,8 @@ const LogoutHandler = () => {
 
      window.location.href = "/";  
   } else {
-    window.location.href = "/landing"; 
+    setShowAlert(true);  
+    setTimeout(() => setShowAlert(false), 4000);  
 
   }
 };
@@ -39,6 +42,8 @@ const LogoutHandler = () => {
 
   return (
     <section className='topBarSection' >
+            {showAlert && <TemporaryAlert message="Continue to Buy!" />} 
+
       <div className="companyTitle">
         {/* <div className='swiggyPngLogodiv'>
           <Link to='/' className='link'>
