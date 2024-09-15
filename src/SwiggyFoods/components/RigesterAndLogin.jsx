@@ -176,18 +176,18 @@ const [isValid, setIsValid] = useState({
             <form onSubmit={handleSubmit}>
               <h1>Create Account</h1>
               <div className="social-iconsRL">
-                <a href="#" className="iconRL">
-                 <img src={search}  alt="" />
-                 </a>
-                <a href="#" className="iconRL">
-                 <img src={facebook}  alt="" />
-                 </a>
-                <a href="#" className="iconRL">
-                 <img src={github}  alt="" />
-                 </a>
-                <a href="#" className="iconRL">
-                 <img src={linkedin}  alt="" />
-                 </a>
+                <div className="iconRL">
+                  <img src={search} alt="" />
+                </div>
+                <div className="iconRL">
+                  <img src={facebook} alt="" />
+                </div>
+                <div className="iconRL">
+                  <img src={github} alt="" />
+                </div>
+                <div className="iconRL">
+                  <img src={linkedin} alt="" />
+                </div>
               </div>
               <span>or use your email for registration</span>
               <input
@@ -274,22 +274,18 @@ const [isValid, setIsValid] = useState({
             <form onSubmit={loginHandler}>
               <h1>Sign In</h1>
               <div className="social-iconsRL">
-                <a href="#" className="iconRL">
-                 <img src={search}  alt="" />
-                 {/* <i className="fa-brands fa-google-plus-g"></i> */}
-                </a>
-                <a href="#" className="iconRL">
-                 <img src={facebook}  alt="" />
-                  {/* <i className="fa-brands fa-facebook-f"></i> */}
-                </a>
-                <a href="#" className="iconRL">
-                 <img src={github}  alt="" />
-                  {/* <i className="fa-brands fa-github"></i> */}
-                </a>
-                <a href="#" className="iconRL">
-                 <img src={linkedin}  alt="" />
-                  {/* <i className="fa-brands fa-linkedin-in"></i> */}
-                </a>
+                <div className="iconRL">
+                  <img src={search} alt="" />
+                </div>
+                <div className="iconRL">
+                  <img src={facebook} alt="" />
+                </div>
+                <div className="iconRL">
+                  <img src={github} alt="" />
+                </div>
+                <div className="iconRL">
+                  <img src={linkedin} alt="" />
+                </div>
               </div>
               <span>or use your email for password</span>
               <input

@@ -18,16 +18,20 @@ const { totalCost } = useContext(ProductContext);
     inputRefHandle();  
 }; */
  
-   const LogoutHandler = () =>{
-    confirm("Are you sure to logout?")
-      localStorage.removeItem("clientId");
-      localStorage.removeItem("clientName");
-      localStorage.removeItem('clientAddress');
-      localStorage.removeItem('clientEmail');
-      localStorage.removeItem('clientPhoneNo');
-      
-   }
+const LogoutHandler = () => {
+  const confirmed = confirm("Are you sure you want to logout?");
+  if (confirmed) {
+     localStorage.removeItem("clientId");
+    localStorage.removeItem("clientName");
+    localStorage.removeItem("clientAddress");
+    localStorage.removeItem("clientEmail");
+    localStorage.removeItem("clientPhoneNo");
 
+     window.location.href = "/";  
+  } else {
+    
+  }
+};
   let clientAddress = (clientName => clientName ? clientName.slice(0, 45) : "No clientName found in localStorage.")(
       localStorage.getItem("clientAddress")
 );

@@ -2015,10 +2015,16 @@ font-size: 18px;
 }
 
 .social-iconsRL{
+  /* border: 1px solid #ce2222; */
     margin: 20px 0;
+    width: 238px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-iconsRL a{
+.iconRL{
     border: 1px solid #ccc;
     border-radius: 20%;
     display: inline-flex;
@@ -2027,7 +2033,9 @@ font-size: 18px;
     margin: 0 3px;
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
+
 .social-iconsRL img{
   /* border: 1px solid #e40b0b; */
   border-radius: 20%;
@@ -2037,6 +2045,11 @@ font-size: 18px;
   margin: 0 3px;
   width: 20px;
   height: 20px;
+  transition:300ms;
+}
+.social-iconsRL  img:hover{
+  width:28px;
+  height:28px;
 }
 .toggleRL-containerRL{
     position: absolute;

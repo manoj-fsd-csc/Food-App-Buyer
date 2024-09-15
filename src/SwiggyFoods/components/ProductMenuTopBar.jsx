@@ -15,15 +15,20 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
  
    const { existingProductC } = useContext(ProductContext);
  
-   const LogoutHandler = () =>{
-    confirm("Are you sure to logout?")
-      localStorage.removeItem("clientId");
+   const LogoutHandler = () => {
+    const confirmed = confirm("Are you sure you want to logout?");
+    if (confirmed) {
+       localStorage.removeItem("clientId");
       localStorage.removeItem("clientName");
-      localStorage.removeItem('clientAddress');
-      localStorage.removeItem('clientEmail');
-      localStorage.removeItem('clientPhoneNo');
+      localStorage.removeItem("clientAddress");
+      localStorage.removeItem("clientEmail");
+      localStorage.removeItem("clientPhoneNo");
+  
+       window.location.href = "/";  
+    } else {
       
-   }
+    }
+  };
   
   const handleSearchClick = () => {
     inputRefHandle();  
