@@ -29,7 +29,8 @@ const LogoutHandler = () => {
 
      window.location.href = "/";  
   } else {
-    
+    window.location.href = "/landing"; 
+
   }
 };
   let clientAddress = (clientName => clientName ? clientName.slice(0, 45) : "No clientName found in localStorage.")(

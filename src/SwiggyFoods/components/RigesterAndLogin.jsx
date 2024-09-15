@@ -88,8 +88,7 @@ const [isValid, setIsValid] = useState({
       const data = await response.json();
   
       if (response.ok) {
-        alert("Login success");
-        setEmail("");
+         setEmail("");
         setPassword("");
         localStorage.setItem("loginTokenC", data.tokenC);
   
@@ -120,7 +119,7 @@ const [isValid, setIsValid] = useState({
         }
       } else {
         console.error("Login failed with status:", response.status);
-        alert("Login failed.");
+        alert("The username or password is incorrect");
       }
     } catch (error) {
       console.error("Login failed:", error);

@@ -20,7 +20,8 @@ import { BiSolidOffer } from "react-icons/bi";
   
        window.location.href = "/";  
     } else {
-      
+      window.location.href = "/landing"; 
+
     }
   };
    return (

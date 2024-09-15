@@ -26,7 +26,8 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
   
        window.location.href = "/";  
     } else {
-      
+      window.location.href = "/landing"; 
+
     }
   };
   
