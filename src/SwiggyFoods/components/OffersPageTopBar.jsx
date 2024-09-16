@@ -95,7 +95,7 @@ import { BiSolidOffer } from "react-icons/bi";
             <Link  className='link' to="/MyAccount">Profile</Link>
             <Link  className='link' to="/CheckOut">Orders</Link>
             <Link  className='link' to="/landing">Favourites</Link>
-            <Link  className='link' to="/" >
+            <Link  className='link' to="" >
                 <div onClick={LogoutHandler}>
                     Logout
                 </div>

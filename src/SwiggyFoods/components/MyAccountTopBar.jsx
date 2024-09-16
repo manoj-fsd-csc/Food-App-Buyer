@@ -97,7 +97,7 @@ const HelpTopBar = () => {
             <Link className="link" to="/landing">
               Favourites
             </Link>
-            <Link className="link" to="/">
+            <Link className="link" to="">
               <div onClick={LogoutHandler}>Logout</div>
             </Link>
           </div>
