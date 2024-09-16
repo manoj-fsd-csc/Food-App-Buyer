@@ -12,6 +12,7 @@ import TemporaryAlert from '.././components/TemporaryAlert ';
 
 
 const TopBar = ( ) => {
+  const { existingProductC } = useContext(ProductContext);
 const { totalCost } = useContext(ProductContext);
 const [showAlert, setShowAlert] = useState(false);  
 
@@ -20,6 +21,7 @@ const [showAlert, setShowAlert] = useState(false);
 }; */
  
 const LogoutHandler = () => {
+
   const confirmed = confirm("Are you sure you want to logout?");
   if (confirmed) {
      localStorage.removeItem("clientId");
@@ -93,7 +95,7 @@ const LogoutHandler = () => {
         <div className="dropdown">
           <Link to='/CheckOut' className='link'>
             <BsBagPlus className='cartIcon' />
-            <div className={totalCost === 0 ? "" : "dotB"}></div>
+            <div className={existingProductC === 0 ? "" : "dotB"}></div>
             {/* <div className="dropdown-content">
               <a href="#option1">Profile</a>
               <a href="#option1">Orders</a>
