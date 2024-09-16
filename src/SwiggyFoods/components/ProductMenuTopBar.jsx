@@ -12,7 +12,7 @@ import TemporaryAlert from '.././components/TemporaryAlert ';
 
 
 
-const ProductMenuTopBar = ({ inputRefHandle }) => {
+const ProductMenuTopBar = () => {
 
   const [showAlert, setShowAlert] = useState(false);  
 
@@ -35,9 +35,9 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
     }
   };
   
-  const handleSearchClick = () => {
-    inputRefHandle();  
-  };
+  // const handleSearchClick = () => {
+  //   inputRefHandle();  
+  // };
 
   let clientAddress = (clientName => clientName ? clientName.slice(0, 45) : "No clientName found in localStorage.")(
       localStorage.getItem("clientAddress")
@@ -67,7 +67,7 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
           </Link>
           </div>
       <div className='topBarLinks'>
-        <Link to='/search' className='link' onClick={handleSearchClick}>
+        <Link to='/search' className='link' >
           <div className='searchIconBox'>
             <BiSearch className='searchIcon' />
             <div className='searchIconString'>Search</div>
