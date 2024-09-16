@@ -81,8 +81,8 @@ const ProductMenuTopBar = () => {
           </div>
         </Link>
 
-        {/* <Link to='/HelpPage' className='link'> */}
-        <Link to='https://www.swiggy.com/support' className='link'>
+        {/* <Link to='https://www.swiggy.com/support' className='link'> */}
+        <Link to='/HelpPage' className='link'>
           <div className='helpBox'>
             <IoHelpBuoyOutline className='helpIcon' />
             <div className='helpIconString'>Help</div>
