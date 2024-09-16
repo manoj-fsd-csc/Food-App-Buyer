@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
- 
+import React, { useEffect, useState } from "react";
+
 const TemporaryAlert = ({ message, duration = 4000 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -8,7 +8,7 @@ const TemporaryAlert = ({ message, duration = 4000 }) => {
       setVisible(false);
     }, duration);
 
-    return () => clearTimeout(timer);  
+    return () => clearTimeout(timer);
   }, [duration]);
 
   if (!visible) return null;

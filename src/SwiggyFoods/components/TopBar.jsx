@@ -13,8 +13,7 @@ import TemporaryAlert from '.././components/TemporaryAlert ';
 
 const TopBar = ( ) => {
 const { totalCost } = useContext(ProductContext);
-const [showAlert, setShowAlert] = useState(false); // State for controlling the alert visibility
-
+const [showAlert, setShowAlert] = useState(false);  
 
 /* const handleSearchClick = () => {
     inputRefHandle();  

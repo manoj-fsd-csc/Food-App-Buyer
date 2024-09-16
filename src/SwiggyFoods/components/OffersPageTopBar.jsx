@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BiSearch } from "react-icons/bi";
 import { BiSolidOffer } from "react-icons/bi";
@@ -6,9 +6,13 @@ import { BiSolidOffer } from "react-icons/bi";
  import { BsBagPlus } from "react-icons/bs";
  import { BsPerson } from "react-icons/bs";
  import swiggyLogo from '../../assets/images/swiggy3.svg'; 
-  
+ import TemporaryAlert from '.././components/TemporaryAlert ';
+
  
  const HelpTopBar=()=> {
+  const [showAlert, setShowAlert] = useState(false);  
+  
+
   const LogoutHandler = () => {
     const confirmed = confirm("Are you sure you want to logout?");
     if (confirmed) {
@@ -20,12 +24,15 @@ import { BiSolidOffer } from "react-icons/bi";
   
        window.location.href = "/";  
     } else {
-      window.location.href = "/landing"; 
-
+      setShowAlert(true);  
+      setTimeout(() => setShowAlert(false), 4000);  
+  
     }
   };
    return (
    <section className='topBarSection'>
+                {showAlert && <TemporaryAlert message="Continue to Buy!" />} 
+
         <div className="companyTitle">
             
             <div className='swiggyPngLogodiv'>

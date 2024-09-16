@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { API_URL } from '../api';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { API_URL } from "../api";
+import { Link } from "react-router-dom";
 import star from "../../assets/images/star.png";
- 
- 
+
 const FirmCollections = () => {
   const [firmData, setFirmData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState('All');
-  const [activeCategory, setActiveCategory] = useState('all');
- 
+  const [selectedRegion, setSelectedRegion] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("all");
+
   const firmDataHandler = async () => {
     try {
       const response = await fetch(`${API_URL}/vendor/all-vendors`);
       const newFirmData = await response.json();
       setFirmData(newFirmData.vendors);
-     } catch (error) {
-      alert('Firm data not fetched');
-      console.error('Firm data not fetched:-', error);
+    } catch (error) {
+      alert("Firm data not fetched");
+      console.error("Firm data not fetched:-", error);
     }
   };
 
@@ -30,8 +29,10 @@ const FirmCollections = () => {
   };
 
   const isRegionMatch = (itemRegions, selectedRegion) => {
-    if (selectedRegion === 'All') return true;
-    return itemRegions.some(region => region.toLowerCase() === selectedRegion.toLowerCase());
+    if (selectedRegion === "All") return true;
+    return itemRegions.some(
+      (region) => region.toLowerCase() === selectedRegion.toLowerCase()
+    );
   };
 
   return (
@@ -41,32 +42,32 @@ const FirmCollections = () => {
       </div>
       <div className="filterButtons">
         <button
-          onClick={() => filterHandler('All', 'all')}
-          className={activeCategory === 'all' ? 'activeButton' : ''}
+          onClick={() => filterHandler("All", "all")}
+          className={activeCategory === "all" ? "activeButton" : ""}
         >
           All
         </button>
         <button
-          onClick={() => filterHandler('south-india', 'south-india')}
-          className={activeCategory === 'south-india' ? 'activeButton' : ''}
+          onClick={() => filterHandler("south-india", "south-india")}
+          className={activeCategory === "south-india" ? "activeButton" : ""}
         >
           South-Indian
         </button>
         <button
-          onClick={() => filterHandler('north-india', 'north-india')}
-          className={activeCategory === 'north-india' ? 'activeButton' : ''}
+          onClick={() => filterHandler("north-india", "north-india")}
+          className={activeCategory === "north-india" ? "activeButton" : ""}
         >
           North-Indian
         </button>
         <button
-          onClick={() => filterHandler('chinese', 'chinese')}
-          className={activeCategory === 'chinese' ? 'activeButton' : ''}
+          onClick={() => filterHandler("chinese", "chinese")}
+          className={activeCategory === "chinese" ? "activeButton" : ""}
         >
           Chinese
         </button>
         <button
-          onClick={() => filterHandler('bakery', 'bakery')}
-          className={activeCategory === 'bakery' ? 'activeButton' : ''}
+          onClick={() => filterHandler("bakery", "bakery")}
+          className={activeCategory === "bakery" ? "activeButton" : ""}
         >
           Bakery
         </button>
@@ -93,10 +94,16 @@ const FirmCollections = () => {
                       <strong>{item.firmName}</strong>
                       <br />
                       <div className="reviewStar">
-                         <img className='cartProductvegimg' src={star} alt="Non-Veg"  />
-                         <div className="reviewStarCount">4.1 <span>(27)</span></div>
-                       </div>
-                      <div className="firmArea">{item.region.join(',')}</div>
+                        <img
+                          className="cartProductvegimg"
+                          src={star}
+                          alt="Non-Veg"
+                        />
+                        <div className="reviewStarCount">
+                          4.1 <span>(27)</span>
+                        </div>
+                      </div>
+                      <div className="firmArea">{item.region.join(",")}</div>
                       <div className="firmArea">{item.area}</div>
                     </div>
                   </div>
@@ -112,10 +119,3 @@ const FirmCollections = () => {
 };
 
 export default FirmCollections;
-
-
-
-
-
-
- 

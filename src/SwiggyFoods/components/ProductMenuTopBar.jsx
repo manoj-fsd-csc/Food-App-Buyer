@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
 import { BiSearch } from "react-icons/bi";
 import { BiSolidOffer } from "react-icons/bi";
@@ -7,12 +7,15 @@ import { BsBagPlus } from "react-icons/bs";
 import { BsPerson } from "react-icons/bs";
 import swiggyLogo from '../../assets/images/swiggy3.svg';
 import { ProductContext } from '../../context/ProductContext';
+import TemporaryAlert from '.././components/TemporaryAlert ';
+
 
 
 
 const ProductMenuTopBar = ({ inputRefHandle }) => {
 
- 
+  const [showAlert, setShowAlert] = useState(false);  
+
    const { existingProductC } = useContext(ProductContext);
  
    const LogoutHandler = () => {
@@ -26,8 +29,9 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
   
        window.location.href = "/";  
     } else {
-      window.location.href = "/landing"; 
-
+      setShowAlert(true);  
+      setTimeout(() => setShowAlert(false), 4000);  
+  
     }
   };
   
@@ -41,6 +45,8 @@ const ProductMenuTopBar = ({ inputRefHandle }) => {
 
   return (
     <section className='topBarSection' >
+                  {showAlert && <TemporaryAlert message="Continue to Buy!" />} 
+
       <div className="companyTitle">
         <div className='swiggyPngLogodiv'>
           <Link to='/landing' className='link'>
